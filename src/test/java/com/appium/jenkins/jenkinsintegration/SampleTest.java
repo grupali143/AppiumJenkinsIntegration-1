@@ -22,7 +22,7 @@ public class SampleTest {
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, System.getProperty("PlatformName"));
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION,System.getProperty("PlatformVersion"));
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"iPhone Simulator");
-		capabilities.setCapability("app","/Users/grupali143/Desktop/UiCatalog.app");
+		capabilities.setCapability("app","/Users/grupali143/Desktop/InTouchHealth.app");
 		
 		capabilities.setCapability("automationName", "Appium");
 	        capabilities.setCapability("udid","e28900f5c9e836c1cb81c403f45569d0fe22f496");
@@ -55,7 +55,7 @@ public class SampleTest {
 		//driver.findElements(By.className("UIAPickerWheel")).get(3).sendKeys("PM");
 		//Thread.sleep(5000);
 		
-		 driver.scrollTo("Date Picker").click();
+		/* driver.scrollTo("Date Picker").click();
 	    WebElement slider = (WebElement) driver.findElements(By.className("UIAPickerWheel")).get(0);
 	    slider.sendKeys("Wed Sep 16");
 	    System.out.println(slider.getAttribute("values"));
@@ -67,10 +67,18 @@ public class SampleTest {
 	    System.out.println(slider.getAttribute("values"));
 	    slider = (WebElement) driver.findElements(By.className("UIAPickerWheel")).get(3);
 	    slider.sendKeys("PM");
-	    System.out.println(slider.getAttribute("values"));
+	    System.out.println(slider.getAttribute("values"));*/
 		   
-		
 	
+	 wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIATextField[1]")).sendKeys("rganjewar");
+	    //wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIASecureTextField[0]")).sendKeys("rganjewar");
+	    wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIASecureTextField[1]")).sendKeys("Siptest143!");
+		wd.findElement(By.name("Login")).click();
+		
+		wd.findElement(By.name("info w")).click();
+		wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIATableView[2]/UIATableCell[7]")).click();
+		//wd.close();
+		capabilities.setCapability(MobileCapabilityType.TAKES_SCREENSHOT, "true");
 		
 		
 		driver.quit();
