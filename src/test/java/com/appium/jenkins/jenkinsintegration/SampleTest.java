@@ -44,7 +44,7 @@ public class SampleTest {
 	    
 	   // wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		
-		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		wd.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		//driver.findElements(By.className("UIAButton")).get(0).click();
 		//driver.scrollTo("Date Picker").click();
 		//WebElement slider = (WebElement) driver.findElements(By.className("UIAPickerWheel")).get(0);
@@ -81,7 +81,7 @@ public class SampleTest {
 		capabilities.setCapability(MobileCapabilityType.TAKES_SCREENSHOT, "true");
 		
 		
-		driver.quit();
+		wd.quit();
 	}
 
 }
