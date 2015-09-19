@@ -45,15 +45,30 @@ public class SampleTest {
 	   // wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-		driver.findElements(By.className("UIAButton")).get(0).click();
-		driver.scrollTo("Date Picker").click();
-		WebElement slider = (WebElement) driver.findElements(By.className("UIAPickerWheel")).get(0);
-	        slider.sendKeys("Mon Sep 21");
+		//driver.findElements(By.className("UIAButton")).get(0).click();
+		//driver.scrollTo("Date Picker").click();
+		//WebElement slider = (WebElement) driver.findElements(By.className("UIAPickerWheel")).get(0);
+	        //slider.sendKeys("Mon Sep 21");
 		//driver.findElements(By.className("UIAPickerWheel")).get(0).sendKeys("Jan 11");
 		//driver.findElements(By.className("UIAPickerWheel")).get(1).sendKeys("11");
 		//driver.findElements(By.className("UIAPickerWheel")).get(2).sendKeys("30");
 		//driver.findElements(By.className("UIAPickerWheel")).get(3).sendKeys("PM");
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
+		
+		 driver.scrollTo("Date Picker").click();
+	    WebElement slider = (WebElement) driver.findElements(By.className("UIAPickerWheel")).get(0);
+	    slider.sendKeys("Wed Sep 16");
+	    System.out.println(slider.getAttribute("values"));
+	    slider = (WebElement) driver.findElements(By.className("UIAPickerWheel")).get(1);
+	    slider.sendKeys("11");
+	    System.out.println(slider.getAttribute("values"));
+	    slider = (WebElement) driver.findElements(By.className("UIAPickerWheel")).get(2);
+	    slider.sendKeys("25");
+	    System.out.println(slider.getAttribute("values"));
+	    slider = (WebElement) driver.findElements(By.className("UIAPickerWheel")).get(3);
+	    slider.sendKeys("PM");
+	    System.out.println(slider.getAttribute("values"));
+		   
 		
 	
 		
