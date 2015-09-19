@@ -16,28 +16,28 @@ public class SampleTest {
 	
 	@Test
 	public void testLaunch() throws MalformedURLException, InterruptedException {
-		//DesiredCapabilities capabilities=new DesiredCapabilities();
-		//capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "Appium");
-		//capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, System.getProperty("PlatformName"));
-		//capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION,System.getProperty("PlatformVersion"));
-		//capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"iPhone Simulator");
-		//capabilities.setCapability("app","/Users/grupali143/Desktop/UiCatalog.app");
-		//IOSDriver driver=new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
+		DesiredCapabilities capabilities=new DesiredCapabilities();
+		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "Appium");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, System.getProperty("PlatformName"));
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION,System.getProperty("PlatformVersion"));
+		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"iPhone Simulator");
+		capabilities.setCapability("app","/Users/grupali143/Desktop/UiCatalog.app");
+		IOSDriver driver=new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
 		
 		
-		DesiredCapabilities capabilities = new DesiredCapabilities();
-	    capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, "");
-	    capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.1");
-	    capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
-	    capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone Simulator");
-	    capabilities.setCapability("app","/Users/grupali143/Desktop/UiCatalog.app");
+		//DesiredCapabilities capabilities = new DesiredCapabilities();
+	    //capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, "");
+	   // capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.1");
+	    //capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
+	   // capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone Simulator");
+	    //capabilities.setCapability("app","/Users/grupali143/Desktop/UiCatalog.app");
 	    
-	    capabilities.setCapability("automationName", "Appium");
-	    capabilities.setCapability("udid","e28900f5c9e836c1cb81c403f45569d0fe22f496");
+	    //capabilities.setCapability("automationName", "Appium");
+	   
 
-	    wd = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+	    //wd = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 	    
-	    wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+	   // wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		driver.findElements(By.className("UIAButton")).get(0).click();
