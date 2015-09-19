@@ -22,6 +22,10 @@ public class SampleTest {
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION,System.getProperty("PlatformVersion"));
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"iPhone Simulator");
 		capabilities.setCapability("app","/Users/grupali143/Desktop/UiCatalog.app");
+		
+		capabilities.setCapability("automationName", "Appium");
+	        capabilities.setCapability("udid","e28900f5c9e836c1cb81c403f45569d0fe22f496");
+
 		IOSDriver driver=new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
 		
 		
